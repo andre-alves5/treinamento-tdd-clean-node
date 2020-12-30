@@ -13,7 +13,7 @@ const makeAddAccount = (): AddAccount => {
   return new AddAccountStub()
 }
 
-const makeValidaton = (): Validation => {
+const makeValidation = (): Validation => {
   class ValidationStub implements Validation {
     validate (input: any): Error {
       return null
@@ -46,7 +46,7 @@ interface SutTypes {
 
 const makeSut = (): SutTypes => {
   const addAccountStub = makeAddAccount()
-  const validationStub = makeValidaton()
+  const validationStub = makeValidation()
   const sut = new SignUpController(addAccountStub, validationStub)
   return {
     sut,
