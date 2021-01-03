@@ -4,7 +4,8 @@ import { Controller, HttpRequest, HttpResponse, Authentication, Validation } fro
 export class LoginController implements Controller {
   constructor (
     private readonly authentication: Authentication,
-    private readonly validation: Validation) {}
+    private readonly validation: Validation
+  ) {}
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
