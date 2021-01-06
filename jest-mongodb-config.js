@@ -1,6 +1,6 @@
 module.exports = {
   mongodbMemoryServer: {
-    version: '6.6.7'
+    version: 'latest'
   },
   mongodbMemoryServerOptions: {
     instance: {
