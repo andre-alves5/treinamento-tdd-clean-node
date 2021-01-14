@@ -14,6 +14,8 @@ services:
     working_dir: /usr/src/tdd-clean-node-api
     restart: always
     command: bash -c "npm install --only=prod && npm run debug"
+    environment: 
+      - MONGO_URL=mongodb://mongo:27017/tdd-clean-node-api
     volumes:
       - ./dist/:/usr/src/tdd-clean-node-api/dist/
       - ./package.json:/usr/src/tdd-clean-node-api/package.json
