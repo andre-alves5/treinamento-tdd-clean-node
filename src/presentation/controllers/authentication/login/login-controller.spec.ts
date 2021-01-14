@@ -1,8 +1,8 @@
 import { LoginController } from './login-controller'
-import { badRequest, serverError, success, unauthorized } from '../../../helpers/http/http-helper'
-import { MissingParamError } from '../../../errors'
 import { HttpRequest, Authentication, Validation } from './login-controller-protocols'
-import { AuthenticationModel } from '../../../../domain/usecases/authentication'
+import { AuthenticationModel } from '@/domain/usecases/authentication'
+import { badRequest, serverError, success, unauthorized } from '@/presentation/helpers/http/http-helper'
+import { MissingParamError } from '@/presentation/errors'
 
 const makeFakeRequest = (): HttpRequest => ({
   body: {
