@@ -5,6 +5,6 @@ import { AddSurveyController } from '@/presentation/controllers/survey/add-surve
 import { Controller } from '@/presentation/protocols'
 
 export const makeAddSurveyController = (): Controller => {
-  const surveyController = new AddSurveyController(makeAddSurveyValidation(), makeDbAddSurvey())
-  return makeLogControllerDecorator(surveyController)
+  const controller = new AddSurveyController(makeAddSurveyValidation(), makeDbAddSurvey())
+  return makeLogControllerDecorator(controller)
 }
