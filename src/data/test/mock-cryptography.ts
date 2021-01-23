@@ -15,7 +15,7 @@ export const mockHasher = (): Hasher => {
 export const mockDecrypter = (): Decrypter => {
   class DecrypterStub implements Decrypter {
     async decrypt (value: string): Promise<string> {
-      return new Promise(resolve => resolve('any_value'))
+      return Promise.resolve('any_value')
     }
   }
   return new DecrypterStub()
