@@ -29,6 +29,7 @@ describe('DbSaveSurveyResult UseCase', () => {
   afterAll(() => {
     MockDate.reset()
   })
+
   test('Should call DbSaveSurveyResultRepository with correct values', async () => {
     const { sut, saveSurveyResultRepositoryStub } = makeSut()
     const saveSpy = jest.spyOn(saveSurveyResultRepositoryStub, 'save')
